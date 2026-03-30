@@ -3,6 +3,13 @@ name: Deploy to Production
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**/package-lock.json'
+      - '**/package.json'
+      - 'backend/Dockerfile'
+      - 'frontend/Dockerfile'
+      - 'frontend/Dockerfile.dev'
+      - 'backend/Dockerfile.dev'
   workflow_dispatch:  # Allow manual trigger
 
 env:

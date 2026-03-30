@@ -1,10 +1,10 @@
 name: Security Scanning
 
 on:
-  schedule:
-    # Run daily at 2 AM UTC
-    - cron: '0 2 * * *'
   workflow_dispatch:
+  # Scheduled scan disabled - re-enable when audit issues are resolved
+  # schedule:
+  #   - cron: '0 2 * * *'
 
 jobs:
   # Dependency vulnerability scanning
